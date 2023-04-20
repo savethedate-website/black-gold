@@ -1,0 +1,1758 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sahitya:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Pinyon+Script&display=swap");
+
+@font-face {
+  font-family: Melinda;
+  src: url(fonts/Melinda\ script.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  max-width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+
+  overflow-x: hidden;
+
+  background: #000;
+}
+
+body {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/*=======Scroll to top button=======*/
+.scrollToTop-btn {
+  z-index: 999;
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  background: #2a2a2a;
+  color: #d49d40;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scrollToTop-btn.active {
+  right: 20px;
+  pointer-events: all;
+  opacity: 1;
+
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d49d40;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*=======Sound button=======*/
+.sound {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  z-index: 999;
+  left: 15px;
+  bottom: 20px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d49d40;
+  background: #2a2a2a;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sound i {
+  font-size: 1.5em;
+  transition: 0.3s ease;
+  color: #d49d40;
+}
+
+.sound i:hover {
+  transform: scale(1.3);
+}
+
+/*=======Scroll bar=======*/
+::-webkit-scrollbar {
+  width: 10px;
+  background: #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d49d40;
+  border-radius: 2em;
+}
+
+/*=======home video div=======*/
+.home {
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
+}
+
+.home .videoDesktop {
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.home video {
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.BGoverlay {
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+/*=======Main section=======*/
+.main {
+  width: 100%;
+  height: 100vh;
+  background: url(images/mainBG.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 30px 20px rgb(0 0 0 / 100%);
+}
+
+.main .main-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  backdrop-filter: blur(1px);
+}
+
+.main .content {
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main .content .top-area .invite {
+  font-family: "Quicksand";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #d49d40;
+  text-shadow: 1px 1px 3px #000;
+  margin-bottom: 20px;
+}
+
+.main .content .top-area .gelaran {
+  font-family: "Quicksand";
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #d49d40;
+  text-shadow: 1px 1px 3px #000;
+  margin-bottom: 30px;
+}
+
+.main .content .top-area .intro {
+  font-family: "Quicksand";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #d49d40;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.main .content .top-area .name {
+  font-family: "Melinda";
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px 0 10px 0;
+  color: #eca241;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.main .content .top-area .save {
+  font-family: "Quicksand";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #d49d40;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.main .content .bottom-area .date {
+  font-family: "Quicksand";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #d49d40;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.main .content .bottom-area .location {
+  font-family: "Quicksand";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #d49d40;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.main .content .bottom-area .day {
+  font-family: "Quicksand";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #d49d40;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.main .content .bottom-area .countdownContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.main .content .bottom-area .countdownContainer .countdownContent {
+  padding: 0 25px 0 25px;
+}
+
+.main .content .bottom-area .countdownContainer .countdownContent .countdown {
+  font-family: "Sahitya";
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+  color: #d49d40;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.main
+  .content
+  .bottom-area
+  .countdownContainer
+  .countdownContent
+  .countdownText {
+  font-family: "Quicksand";
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #d49d40;
+  margin-top: -10px;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.main .content .bottom-area a {
+  font-family: "Quicksand";
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  width: 150px;
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #eca241;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d49d40;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* ------- image circle section styles ------- */
+.circle-section {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  padding: 100px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-section .bride {
+  position: absolute;
+  color: #d6982b;
+  font-family: "Melinda";
+  font-size: 70px;
+  font-weight: 600;
+  transform: translate(-170px, -100px);
+  text-shadow: 2px 2px 10px #000;
+}
+
+.circle-section img {
+  width: 30%;
+  border-radius: 50%;
+
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6ad60;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
+}
+
+.circle-section .groom {
+  position: absolute;
+  color: #d6982b;
+  font-family: "Melinda";
+  font-size: 70px;
+  font-weight: 600;
+  transform: translate(150px, 100px);
+  text-shadow: 2px 2px 10px #000;
+}
+
+/* ------- quote section styles ------- */
+.quote-section {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  padding: 50px 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-section .quote {
+  font-family: "Sahitya";
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  color: #d6982b;
+}
+
+.quote-section .gospel {
+  font-family: "Sahitya";
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 20px;
+  color: #d6982b;
+}
+
+.quote-section .logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.quote-section .logo img {
+  width: 100%;
+}
+
+/* ------- wedding card styles ------- */
+.wedding-card {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  padding: 50px 0 100px 0;
+}
+
+.wedding-card .top-text {
+  font-family: "Cinzel";
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 70px;
+  color: #d6982b;
+}
+
+.wedding-card .top {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.wedding-card .top .left {
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.wedding-card .top .left .photo {
+  width: 60%;
+  height: auto;
+  border-radius: 30px;
+
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6982b;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
+}
+
+.wedding-card .top .right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 50px;
+}
+
+.wedding-card .bottom {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  flex-direction: row;
+  padding: 30px 0 30px 0;
+}
+
+.wedding-card .bottom .left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 0 50px;
+}
+
+.wedding-card .bottom .right {
+  width: 45%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.wedding-card .bottom .right .photo {
+  width: 60%;
+  height: auto;
+  border-radius: 30px;
+
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6982b;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
+}
+
+.name-text1 {
+  font-family: "Melinda";
+  font-size: 64px;
+  font-weight: 500;
+  text-align: center;
+  margin: 50px 0 30px 0;
+  color: #eca241;
+}
+
+.fullname1 {
+  font-family: "Cinzel";
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 0 10px 0;
+  color: #eca241;
+}
+
+.born-text1 {
+  font-family: "Sahitya";
+  font-size: 22px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #d6ad60;
+}
+
+.parent-text1 {
+  font-family: "Cinzel";
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: #d6982b;
+}
+
+.plus-text1 {
+  font-family: "Sahitya";
+  font-size: 22px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  color: #d6ad60;
+}
+
+.name-text2 {
+  font-family: "Melinda";
+  font-size: 64px;
+  font-weight: 500;
+  text-align: center;
+  margin: 50px 0 30px 0;
+  color: #eca241;
+}
+
+.fullname2 {
+  font-family: "Cinzel";
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 0 10px 0;
+  color: #eca241;
+}
+
+.born-text2 {
+  font-family: "Sahitya";
+  font-size: 22px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #d6ad60;
+}
+
+.parent-text2 {
+  font-family: "Cinzel";
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: #d6982b;
+}
+
+.parent-text2 span {
+  font-family: "Cinzel";
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  font-style: italic;
+  color: #d6982b;
+}
+
+.plus-text2 {
+  font-family: "Sahitya";
+  font-size: 22px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  color: #d6ad60;
+}
+
+.wedding-card .bottom-text {
+  font-family: "Sahitya";
+  font-size: 25px;
+  line-height: 27px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 50px;
+  color: #d6982b;
+}
+
+/* ------- mid image styles ------- */
+.midImage {
+  width: 100%;
+
+  background: url(images/h2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  /* border-style: solid;
+  border-width: 2px;
+  border-color: #d6982b; */
+  box-shadow: 0 0 30px 20px rgb(0 0 0 / 100%);
+}
+
+.midImage img {
+  width: 100%;
+}
+
+.midImage .overlay {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.midImage .overlay .topGradient {
+  width: 100%;
+  height: 50px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.midImage .overlay .bottomGradient {
+  width: 100%;
+  height: 50px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+/* ------- schedule styles ------- */
+.schedule {
+  padding: 100px 20px 50px 20px;
+  flex-direction: column;
+}
+
+.schedule .title-area {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.schedule .title-area h1 {
+  font-family: "Pinyon Script";
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #eca241;
+}
+
+.schedule .title-area h2 {
+  font-family: "Cinzel";
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d6982b;
+}
+
+.schedule .content-area .mass {
+  background: url(images/V4.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.schedule .content-area .chineseTea {
+  background: url(images/V5.JPG) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.schedule .content-area .mogongoi {
+  background: url(images/V6.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.schedule .content-area .reception {
+  background: url(images/V7.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.schedule .content-area {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.schedule .content-area .content {
+  width: 24%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6982b;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
+}
+
+.schedule .content-area .content-overlay {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 30px;
+
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.schedule .content-area .content .top {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.schedule .content-area .content .bottom {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.schedule .content-area .content .top .title {
+  font-family: "Cinzel";
+  font-size: 20px;
+  font-weight: 600;
+  color: #d6982b;
+}
+
+.schedule .content-area .content .top p {
+  font-family: "Sahitya";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #d6982b;
+  margin: 10px 0 10px 0;
+}
+
+/* ------- rsvp styles ------- */
+.hide {
+  position: absolute;
+  top: -99;
+  left: -99;
+  width: 0;
+  height: 0;
+}
+
+.rsvp {
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  padding: 50px 0 100px 0;
+}
+
+.rsvp .content {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6ad60;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
+  margin: 20px;
+  overflow: hidden;
+
+  background: url(images/SQ2.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.rsvp .content .rsvp-overlay {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.rsvp .title {
+  font-family: "Pinyon Script";
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #eca241;
+}
+
+.rsvp .text1 {
+  font-family: "Quicksand";
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d6ad60;
+}
+
+.rsvp .text2 {
+  font-family: "Quicksand";
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d6ad60;
+}
+
+.rsvp .rsvpForm .formText {
+  font-family: "Quicksand";
+  font-size: 20px;
+  color: #d6ad60;
+}
+
+.rsvp .rsvpForm .inputCombine {
+  width: 100%;
+  font-family: "Quicksand";
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 5px;
+  border-style: solid;
+  border-color: #eca241;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  color: #000;
+
+  margin: 5px 0 0 0;
+}
+
+.rsvp .rsvpForm .inputCombine:focus {
+  border-style: ridge;
+  border-color: #eca241 !important;
+}
+
+.rsvp .rsvpForm .radioText {
+  font-family: "Quicksand";
+  font-size: 20px;
+  color: #d6ad60;
+}
+
+input[type="radio"] {
+  accent-color: #ffa500;
+}
+
+.rsvp .rsvpForm textarea {
+  width: 100%;
+  font-family: "Quicksand";
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 5px;
+  border-style: solid;
+  border-color: #eca241;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  color: #000;
+  resize: none;
+  margin: 5px 0 0 0;
+}
+
+.rsvp .rsvpForm textarea:focus {
+  border-style: ridge;
+  border-color: #eca241 !important;
+}
+
+.rsvp .rsvpForm .inputSend {
+  width: 100%;
+  font-family: "Quicksand";
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 5px;
+  border-style: solid;
+  border-color: #eca241;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  background: #d6982b;
+  margin: 5px 0 0 0;
+}
+
+.rsvp .rsvpForm .inputSend:focus {
+  border-style: ridge;
+  border-color: #eca241 !important;
+}
+
+.rsvp .content-wish-container {
+  width: 50%;
+  height: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6ad60;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
+  margin: 20px;
+  overflow: hidden;
+
+  background: url(images/V9.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.rsvp .content-wish-container .wish-overlay {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.rsvp .content-wish-container .wish-overlay .title-wish {
+  font-family: "Great Vibes";
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #eca241;
+  height: 10%;
+}
+
+.rsvp .content-wish-container .wish-overlay .wishes-content {
+  height: 90%;
+  overflow-y: scroll;
+  padding: 0 10px;
+}
+
+/* ------- gift section styles ------- */
+.gift {
+  width: 100%;
+  flex-direction: column;
+  padding: 50px 0 30px 0;
+}
+
+.gift .gift-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6ad60;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
+}
+
+.gift .gift-content h1 {
+  font-family: "Pinyon Script";
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #eca241;
+}
+
+.gift .gift-content p {
+  font-family: "Sahitya";
+  font-size: 24px;
+  line-height: 26px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d6ad60;
+}
+
+.gift .gift-content button {
+  font-family: "Sahitya";
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d6ad60;
+  cursor: pointer;
+
+  border-radius: 10px;
+  padding: 10px;
+  border-style: solid;
+  border-color: #eca241;
+  background: rgba(0, 0, 0, 0);
+}
+
+.cardContainer {
+  width: 500px;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  border-style: solid;
+  border-color: #eca241;
+}
+
+.cardContainer .bankName {
+  font-family: "Sahitya";
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 34px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d6ad60;
+}
+
+.cardContainer .bankNo {
+  font-family: "Quicksand";
+  font-size: 28px;
+  line-height: 30px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d6ad60;
+}
+
+.cardContainer .name {
+  font-family: "Sahitya";
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #d6ad60;
+}
+
+.cardContainer .copyButton {
+  font-family: "Sahitya";
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  color: #d6ad60;
+  cursor: pointer;
+
+  border-radius: 10px;
+  padding: 10px;
+  border-style: ridge;
+  border-color: #eca241;
+}
+
+/* ------- gallery section styles ------- */
+.gallery {
+  width: 100%;
+  flex-direction: column;
+  padding: 50px 100px 20px 100px;
+
+  background: #000;
+}
+
+.gallery h1 {
+  font-family: "Great Vibes";
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #eca241;
+}
+
+.gallery .slide-show1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.slide-show1 .slide.active {
+  opacity: 1;
+  transition: 2s;
+}
+
+.slide-show1 .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  background: #000;
+
+  border-radius: 10px;
+  padding: 10px;
+  border-style: ridge;
+  border-color: #eca241;
+}
+
+.slide-show1 .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ------- prewedding video styles ------- */
+.video-section {
+  width: 100%;
+  flex-direction: column;
+  padding: 100px 50px 50px 50px;
+}
+
+.video-section h1 {
+  font-family: "Sahitya";
+  font-size: 32px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #d6ad60;
+}
+
+.video-section h2 {
+  font-family: "Sahitya";
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d6ad60;
+}
+
+.video-section .hashtag {
+  font-family: "Sahitya";
+  font-size: 28px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  color: #eca241;
+  margin-top: 30px;
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6ad60;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
+}
+
+/* ------- last image section styles ------- */
+.lastImg-section {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+
+  background: url(images/V8.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  box-shadow: 0 0 30px 20px rgb(0 0 0 / 100%);
+}
+
+.lastImg-section .top-overlay {
+  width: 100%;
+  height: 100px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.lastImg-section .overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.lastImg-section .overlay .intro {
+  font-family: "Quicksand";
+  font-size: 28px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #d6ad60;
+}
+
+.lastImg-section .overlay .names {
+  font-family: "Melinda";
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  color: #d6ad60;
+}
+
+/* ------- footer section styles ------- */
+.footer {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  padding: 50px 0;
+
+  background: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .logo {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .logo img {
+  width: 100%;
+}
+
+.footer .developer {
+  font-family: "Cinzel";
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+  color: #eca241;
+}
+
+@media (max-width: 770px) {
+  /* ------- main styles ------- */
+  .main {
+    background-size: cover;
+  }
+
+  .main .content {
+    justify-content: space-around;
+    padding: 0 0 0 0;
+  }
+
+  .main .content .top-area .invite {
+    font-size: 16px;
+  }
+
+  .main .content .top-area .gelaran {
+    font-size: 18px;
+  }
+
+  .main .content .top-area .intro {
+    font-size: 16px;
+  }
+
+  .main .content .top-area .name {
+    font-size: 50px;
+    margin: 10px 0 0 0;
+  }
+
+  .main .content .top-area .save {
+    font-size: 16px;
+  }
+
+  .main .content .bottom-area .date {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .main .content .bottom-area .day {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .main .content .bottom-area .location {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .main .content .bottom-area .countdownContainer {
+    flex-direction: row;
+    padding: 0 0 0 0;
+  }
+
+  .main .content .bottom-area .countdownContainer .countdownContent {
+    padding: 0 5px 0 5px;
+  }
+
+  .main .content .bottom-area .countdownContainer .countdownContent .countdown {
+    font-size: 30px;
+  }
+
+  .main
+    .content
+    .bottom-area
+    .countdownContainer
+    .countdownContent
+    .countdownText {
+    font-size: 14px;
+    margin-top: -10px;
+  }
+
+  .main .slide-show2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .slide-show2 .slide2.active {
+    opacity: 1;
+    transition: 2s;
+  }
+
+  .slide-show2 .slide2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    background: #000;
+  }
+
+  .slide-show2 .slide2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ------- image circle section styles ------- */
+  .circle-section {
+    padding: 55px 0;
+  }
+
+  .circle-section .bride {
+    font-size: 30px;
+    transform: translate(-80px, -70px);
+  }
+
+  .circle-section img {
+    width: 60%;
+  }
+
+  .circle-section .groom {
+    font-size: 30px;
+    transform: translate(70px, 70px);
+  }
+
+  /* ------- quote section styles ------- */
+  .quote-section {
+    padding: 20px 20px;
+  }
+
+  .quote-section .quote {
+    font-size: 14px;
+  }
+
+  .quote-section .gospel {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .quote-section .logo {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+  }
+
+  /* ------- wedding card styles ------- */
+  .wedding-card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 30px 0 30px 0;
+
+    /* background: blue; */
+  }
+
+  .wedding-card .top-text {
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+
+  .wedding-card .top {
+    flex-direction: column;
+  }
+
+  .wedding-card .top .left {
+    width: 100%;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  .wedding-card .top .left .photo {
+    width: 80%;
+  }
+
+  .wedding-card .top .right {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wedding-card .bottom {
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+
+  .wedding-card .bottom .left {
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .wedding-card .bottom .right {
+    width: 100%;
+    justify-content: center;
+    padding-top: 50px;
+  }
+
+  .wedding-card .bottom .right .photo {
+    width: 80%;
+  }
+
+  .name-text1 {
+    font-size: 40px;
+    margin: 20px 0 10px 0;
+  }
+
+  .fullname1 {
+    font-size: 16px;
+  }
+
+  .born-text1 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .parent-text1 {
+    font-size: 16px;
+  }
+
+  .plus-text1 {
+    font-size: 16px;
+    margin: 5px 0 5px 0;
+  }
+
+  .name-text2 {
+    font-size: 40px;
+    margin: 20px 0 10px 0;
+  }
+
+  .fullname2 {
+    font-size: 16px;
+  }
+
+  .born-text2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .parent-text2 {
+    font-size: 16px;
+  }
+
+  .plus-text2 {
+    font-size: 16px;
+    margin: 5px 0 5px 0;
+  }
+
+  .wedding-card .bottom-text {
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0 20px 0 20px;
+  }
+
+  /* ------- mid image styles ------- */
+  .midImage {
+    width: 100%;
+  }
+
+  .midImage img {
+    width: 100%;
+  }
+  .midImage .overlay {
+    width: 100%;
+    height: 300px;
+  }
+
+  /* ------- schedule syles ------- */
+  .schedule {
+    padding: 50px 20px 10px 20px;
+    flex-direction: column;
+  }
+
+  .schedule .title-area h1 {
+    font-size: 32px;
+  }
+
+  .schedule .title-area h2 {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .schedule .content-area {
+    flex-direction: column;
+  }
+
+  .schedule .content-area .content {
+    width: 100%;
+    margin: 10px 0 40px 0;
+  }
+
+  .schedule .content-area .content .top .title {
+    font-size: 16px;
+  }
+
+  .schedule .content-area .content .top p {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 5px 0 5px 0;
+  }
+
+  /* ------- rsvp styles ------- */
+  .rsvp {
+    flex-direction: column;
+    padding: 10px 0 20px 0;
+  }
+
+  .rsvp .content {
+    width: 90%;
+  }
+
+  .rsvp .title {
+    font-size: 40px;
+  }
+
+  .rsvp .text1 {
+    font-size: 16px;
+  }
+
+  .rsvp .text2 {
+    font-size: 16px;
+  }
+
+  .rsvp .rsvpForm .formText {
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  .rsvp .rsvpForm .inputCombine {
+    font-size: 14px;
+    padding: 3px;
+    border-radius: 6px;
+  }
+
+  .rsvp .rsvpForm .radioText {
+    font-size: 14px;
+  }
+
+  .rsvp .rsvpForm textarea {
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  .rsvp .rsvpForm .inputSend {
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  .rsvp .content-wish-container {
+    width: 90%;
+    height: 450px;
+  }
+
+  .rsvp .content-wish-container .wish-overlay {
+    padding: 30px 10px;
+  }
+
+  .rsvp .content-wish-container .wish-overlay .title-wish {
+    font-size: 40px;
+  }
+
+  .rsvp .content-wish-container .wish-overlay .wishes-content {
+    overflow-y: scroll;
+    padding: 0 8px;
+  }
+
+  /* ------- gift section styles ------- */
+  .gift {
+    flex-direction: column;
+    padding: 50px 10px 20px 10px;
+  }
+  .gift .gift-content h1 {
+    font-size: 40px;
+  }
+
+  .gift .gift-content p {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .gift .gift-content button {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 8px;
+  }
+
+  .cardContainer {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .cardContainer .bankName {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .cardContainer .bankNo {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+
+  .cardContainer .name {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+
+  .cardContainer .copyButton {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  /* ------- prewedding video styles ------- */
+  .video-section {
+    padding: 30px 10px 30px 10px;
+  }
+  .video-section h1 {
+    font-size: 16px;
+  }
+
+  .video-section h2 {
+    font-size: 16px;
+  }
+
+  .video-section .hashtag {
+    font-size: 14px;
+  }
+
+  /* ------- last image section styles ------- */
+  .lastImg-section {
+    width: 100%;
+    height: 60vh;
+    flex-direction: column;
+  }
+
+  .lastImg-section .overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  .lastImg-section .overlay .intro {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .lastImg-section .overlay .names {
+    font-family: "Melinda";
+    font-size: 20px;
+  }
+
+  /* ------- footer section styles ------- */
+  .footer {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 10px 0;
+
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .logo {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .logo img {
+    width: 100%;
+  }
+
+  .footer .developer {
+    font-size: 8px;
+    margin: 10px 0;
+  }
+}
